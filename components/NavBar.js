@@ -108,7 +108,7 @@ export const NavBar = () => {
           <Link href="/contact"><A>Contact</A></Link>
         </NavItem>
         <NavItem>
-          <Link href="/blog"><A>Blog</A></Link>
+          <A href="https://blog.betterlifesavings.com/" target='_blank'>Blog</A>
         </NavItem>
         <NavItem>
           <Link href="/support"><A>Support</A></Link>

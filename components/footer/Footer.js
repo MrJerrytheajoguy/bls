@@ -106,7 +106,7 @@ bottom: 0;
 left: 0;
 `
 
-export default () => {
+const FooterLayout = () => {
   return (
     <Footer>
       <Overlay>
@@ -181,7 +181,7 @@ export default () => {
                 />
               </A>
               <A
-                href="https://www.instagram.com/BetterLifesavings/"
+                href="https://www.instagram.com/betterlifesavings2020/"
                 title="instagram"
               >
                 <FontAwesomeIcon
@@ -230,3 +230,5 @@ export default () => {
     </Footer>
   );
 };
+
+export default FooterLayout;

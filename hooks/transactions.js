@@ -54,10 +54,8 @@ function useTransactions() {
           date: new Date().toISOString(),
           ownerDetails: {
             name: owner.displayName,
-            address: owner.address1,
-            city: owner.city,
-            state: owner.state,
-          },
+            location: owner.city
+          }
         })
         .then(function () {
           setTransLoading(false);

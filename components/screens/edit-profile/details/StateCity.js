@@ -114,7 +114,6 @@ export const StateCityGenderBirth = ({ formik }) => {
         <Form.Group as={Col} controlId="Formik10" sm={6}>
           <Form.Label srOnly>Date Of Birth</Form.Label>
           <Form.Control
-            style={styles.control}
             type="date"
             name="dob"
             {...getFieldProps("dob")}

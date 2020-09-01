@@ -78,11 +78,11 @@ function EditProfileForm() {
           email: init.email || "",
           phoneNumber: init.phoneNumber || "",
           address1: init.address1 || "",
-          address2: init.address2 || "",
+          address2: '',
           city: init.city || "",
           state: init.state || "",
           gender: init.gender || "",
-          dob: init.dob || "",
+          dob: init.dob || (new Date().toLocaleString().split(','))[0],
         }}
       >
         {(formik) => (
