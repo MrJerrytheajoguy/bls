@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import "bootstrap/dist/css/bootstrap.min.css";
 import { ThemeProvider } from "styled-components";
 import "../styles/globals.css";
@@ -39,11 +40,16 @@ const theme = {
 
 function MyApp({ Component, pageProps }) {
   return (
+    <>
+    <Head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </Head>
     <ThemeProvider theme={theme}>
       <Layout>
         <Component {...pageProps} />
       </Layout>
     </ThemeProvider>
+    </>
   );
 }
 
