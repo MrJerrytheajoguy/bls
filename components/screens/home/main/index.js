@@ -42,10 +42,10 @@ const Plan = styled(Row)`
 `;
 const BannerDivText = styled.div`
   background-image: linear-gradient(
-    rgba(0, 0, 0, 0.8),
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.8)
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.7)
   );
   padding: 6rem 2rem;
   width: 100%;

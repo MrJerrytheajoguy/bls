@@ -82,7 +82,7 @@ function EditProfileForm() {
           city: init.city || "",
           state: init.state || "",
           gender: init.gender || "",
-          dob: init.dob || (new Date().toLocaleString().split(','))[0],
+          dob: init.dob || "1990-01-01",
         }}
       >
         {(formik) => (
