@@ -22,7 +22,6 @@ function useGetUser() {
   useEffect(() => {
     const unregisterAuthObserver = auth.onAuthStateChanged(function (user) {
       if (user) {
-        console.log(user);
         const { uid, phoneNumber } = user;
         setData({ isAuth: !!user, uid, phoneNumber });
         db.collection("users")
@@ -36,7 +35,7 @@ function useGetUser() {
             { merge: true }
           )
           .then(function () {
-            console.log("login successful!");
+            console.log("authentication successful!");
           })
           .catch(function (error) {
             console.log(error);
@@ -60,16 +59,12 @@ function useGetUser() {
             const data = doc.data();
             setUserDetails(data);
             data && setDetailsUpdated(!!data.username);
-            console.log("Current data: ", doc.data());
-            console.log("user:", data);
-            console.log("details:", userDetails);
           });
         return () => unsubscribe();
       }
     }
   }, [db, data]);
 
-  console.log("details:", userDetails);
 
   const whenAuth = (isNewUser) => {
     setNewUser(isNewUser);

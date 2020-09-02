@@ -12,7 +12,6 @@ const Header = styled(Modal.Header)`
 const WithdrawalModal = ({open, close, userDetails, postTransaction, transLoading}) => {
 
   const handleClose = () => close();
-  console.log(open)
 
   return (
     <Modal centered show={open} onHide={handleClose}>

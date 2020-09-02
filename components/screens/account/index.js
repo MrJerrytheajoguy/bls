@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Col, Button, Table, Badge } from "react-bootstrap";
+import { Card, Col, Button, Table, Badge, Image } from "react-bootstrap";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
@@ -87,10 +87,6 @@ const WhenUser = styled.div`
   border: 4px solid #e0e0e0;
   border-radius: 50%;
   position: relative;
-  background-image: url(${(props) => props.url});
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -241,8 +237,7 @@ const Account = () => {
                     <WhenUser url={userDetails.url}>
                       <Link href={`/settings/edit-profile`}>
                         <a>
-                          {" "}
-                          <FontAwesomeIcon icon="pencil-alt" color="bue" />
+                          <Image src={userDetails.url} roundedCircle width={116} height={116}  />
                         </a>
                       </Link>
                     </WhenUser>
@@ -305,7 +300,7 @@ const Account = () => {
                     {userDetails.plan ? (
                       <Balance sm={6}>{userDetails.plan}</Balance>
                     ) : (
-                      <Button size='sm' onClick={() => openPlan()}>
+                      <Button size="sm" onClick={() => openPlan()}>
                         Select a Savings Plan
                       </Button>
                     )}
