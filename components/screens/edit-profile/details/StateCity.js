@@ -7,6 +7,8 @@ import styled from "styled-components";
 const styles = {
   root: {
     position: "relative",
+    textAlign: 'left',
+    margin: '20px 0'
   },
   control: {
     border: "none",
@@ -32,10 +34,9 @@ export const StateCityGenderBirth = ({ formik }) => {
   return (
     <>
       <Form.Row>
-        <Form.Group as={Col} controlId="Formik07">
-          <Form.Label srOnly>City</Form.Label>
+        <Form.Group as={Col} controlId="Formik07" style={styles.root}>
+          <Form.Label >City</Form.Label>
           <Form.Control
-            style={styles.control}
             ref={cityInput}
             type="text"
             name="city"
@@ -47,14 +48,10 @@ export const StateCityGenderBirth = ({ formik }) => {
           <Form.Control.Feedback type="invalid">
             {errors.city}
           </Form.Control.Feedback>
-          <Icon onClick={focusCity}>
-            <FontAwesomeIcon icon="pencil-alt" color="grey" />
-          </Icon>
         </Form.Group>
-        <Form.Group as={Col} controlId="Formik08">
-          <Form.Label srOnly>State</Form.Label>
+        <Form.Group as={Col} controlId="Formik08" style={styles.root}>
+          <Form.Label >State</Form.Label>
           <Form.Control
-            style={styles.control}
             ref={stateInput}
             type="text"
             name="state"
@@ -66,16 +63,13 @@ export const StateCityGenderBirth = ({ formik }) => {
           <Form.Control.Feedback type="invalid">
             {errors.state}
           </Form.Control.Feedback>
-          <Icon onClick={focusState}>
-            <FontAwesomeIcon icon="pencil-alt" color="grey" />
-          </Icon>
         </Form.Group>
       </Form.Row>
 
       <Form.Row>
         <Col sm={6}>
           <fieldset>
-            <Form.Group as={Row}>
+            <Form.Group as={Row} style={styles.root}>
               <Form.Label as="legend" column sm={6}>
                 Gender
               </Form.Label>
@@ -111,8 +105,8 @@ export const StateCityGenderBirth = ({ formik }) => {
             </Form.Group>
           </fieldset>
         </Col>
-        <Form.Group as={Col} controlId="Formik10" sm={6}>
-          <Form.Label srOnly>Date Of Birth</Form.Label>
+        <Form.Group as={Col} controlId="Formik10" sm={6} style={styles.root}>
+          <Form.Label >Date Of Birth</Form.Label>
           <Form.Control
             type="date"
             name="dob"

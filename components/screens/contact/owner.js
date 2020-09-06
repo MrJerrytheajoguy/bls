@@ -9,41 +9,25 @@ const Details = styled(ListGroup)`
   margin-bottom: 20px;
   display: ${(props) => (props.text ? "none" : "block")};
 `;
-const Left = styled.span`
+const Span = styled.span`
   font-weight: bold;
+  padding-left: 20px;
 `;
-const Right = styled.span`
-  float: right;
-`;
-const Wrapper = styled.div`
-  max-width: 100%;
-`;
+
 const Owner = ({ data, text }) => {
   return (
     <Details className="shadow-sm" text={text}>
       <ListGroup.Item className="row">
-        <Wrapper>
-          <Left>Full Name:</Left>
-          <Right>{data.displayName}</Right>
-        </Wrapper>
+        Fullname: <Span>{data.displayName}</Span>
       </ListGroup.Item>
       <ListGroup.Item className="row">
-        <Wrapper>
-          <Left>Phone Number:</Left>
-          <Right>{data.phoneNumber}</Right>
-        </Wrapper>
+        Phone Number: <Span>{data.phoneNumber}</Span>
       </ListGroup.Item>
       <ListGroup.Item className="row">
-        <Wrapper>
-          <Left>Primary Address:</Left>
-          <Right>{data.address1}</Right>
-        </Wrapper>
+        Address: <Span>{data.address1}</Span>
       </ListGroup.Item>
       <ListGroup.Item className="row">
-        <Wrapper>
-          <Left>City:</Left>
-          <Right>{`${data.city} ${data.state}`}</Right>
-        </Wrapper>
+        City: <Span>{`${data.city} ${data.state}`}</Span>
       </ListGroup.Item>
     </Details>
   );

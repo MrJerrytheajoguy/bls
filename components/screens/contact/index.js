@@ -27,8 +27,10 @@ const Div = styled.div`
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   padding: 50px 20px;
-  @media (min-width: 500px) {
-    margin: 150px 20vw;
+  @media (max-width: 500px) {
+    margin: 150px 0;
+    font-size: 0.8em !important;
+    text-align: left;
   }
 `;
 const FormWrapper = styled.div`

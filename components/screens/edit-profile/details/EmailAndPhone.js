@@ -6,6 +6,8 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 const styles = {
   root: {
     position: "relative",
+    textAlign: 'left',
+    margin: '20px 0'
   },
   control: {
     border: "none",
@@ -27,23 +29,18 @@ export const EmailAndPhone = ({ formik }) => {
   return (
     <>
       <Form.Group md="4" controlId="Formik03" style={styles.root}>
-        <Form.Label srOnly>Email</Form.Label>
+        <Form.Label >Email</Form.Label>
         <Form.Control
-          style={styles.control}
           ref={emailInput}
           type="email"
           name="email"
           placeholder="Email"
           {...getFieldProps("email")}
         />
-        <div style={styles.icon} onClick={focusEmail}>
-          <FontAwesomeIcon icon="pencil-alt" color='grey'/>
-        </div>
       </Form.Group>
-      <Form.Group md="4" controlId="Formik04">
-        <Form.Label srOnly>Phone</Form.Label>
+      <Form.Group md="4" controlId="Formik04" style={styles.root}>
+        <Form.Label>Phone</Form.Label>
         <Form.Control
-          style={styles.control}
           disabled
           type="tel"
           name="phoneNumber"

@@ -7,6 +7,8 @@ import styled from 'styled-components'
 const styles = {
   root: {
     position: "relative",
+    textAlign: 'left',
+    margin: '20px 0'
   },
   control: {
     border: "none",
@@ -31,9 +33,8 @@ export const Address = ({ formik }) => {
   return (
     <>
       <Form.Group md="4" controlId="Formik05" style={styles.root}>
-        <Form.Label srOnly>Address Line 1</Form.Label>
+        <Form.Label >Address</Form.Label>
         <Form.Control
-          style={styles.control}
           ref={address1}
           type="text"
           name="address1"
@@ -45,9 +46,6 @@ export const Address = ({ formik }) => {
         <Form.Control.Feedback type="invalid">
           {errors.address1}
         </Form.Control.Feedback>
-        <Icon onClick={focusAddress1}>
-          <FontAwesomeIcon icon="pencil-alt" color='grey'/>
-        </Icon>
       </Form.Group>
     </>
   );

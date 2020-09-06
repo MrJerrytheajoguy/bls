@@ -6,7 +6,9 @@ import styled from 'styled-components';
 
 const styles = {
   root: {
-    position: 'relative'
+    position: "relative",
+    textAlign: 'left',
+    margin: '20px 0'
   },
   control: {
     border: 'none',
@@ -38,9 +40,8 @@ export const Name = ({ formik }) => {
   return (
     <>
       <Form.Group md="4" controlId="Formik13" style={styles.root}>
-        <Form.Label srOnly>Full Name</Form.Label>
+        <Form.Label >Full Name</Form.Label>
         <Form.Control
-        style={styles.control}
         ref={input}
           type="text"
           name="displayName"
@@ -52,9 +53,6 @@ export const Name = ({ formik }) => {
         <Form.Control.Feedback type="invalid">
           {errors.displayName}
         </Form.Control.Feedback>
-        <Icon onClick={focusInput}>
-          <FontAwesomeIcon icon="pencil-alt" color='grey'/>
-        </Icon>
       </Form.Group>
     </>
   );
