@@ -113,19 +113,19 @@ const FooterLayout = () => {
       <div className="row footer-cards">
         <div className="card text-white col-md-4">
           <div className="card-body">
-            <h4 className="display-6">BetterLifesavings</h4>
-            <H4 className="display-4">
+            <h3 className="display-6">BetterLifesavings</h3>
+            <p className="display-7">
               6, Omokudu Ajayi Street, Okuneye Estate, Egbe. Lagos Nigeria.
-            </H4>
-            <H4 className="display-4">Telephone:  <br />
+            </p>
+            <p className="display-7">Telephone:  <br />
               <a 
                 href="tel:+2348055018140"
                 style={{color: 'white'}}
               >
                 +2348055018140
               </a>
-            </H4>
-            <H4 className="display-4">
+            </p>
+            <p className="display-7">
               e-mail:  <br />
               <a 
                 href="mailto:betterlifesavings2020@gmail.com"
@@ -133,7 +133,7 @@ const FooterLayout = () => {
               >
                 betterlifesavings2020@gmail.com
               </a>
-            </H4>
+            </p>
           </div>
         </div>
         <div className="card text-white col-md-4">
